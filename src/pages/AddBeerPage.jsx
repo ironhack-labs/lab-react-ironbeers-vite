@@ -23,7 +23,7 @@ function AddBeerPage() {
     const handleBeerSubmit = e => {
         e.preventDefault()
         axios.post(`https://ih-beers-api2.herokuapp.com/beers/new`, newBeerData)
-            .then(() => res.Status(200))
+            .then(() => console.log('done'))
             .catch(err => console.log(err))
     }
 
