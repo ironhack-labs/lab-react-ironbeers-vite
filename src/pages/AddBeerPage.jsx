@@ -1,3 +1,9 @@
-function AddBeerPage() {}
+
+
+function AddBeerPage() {
+
+
+}
 
 export default AddBeerPage;
+
