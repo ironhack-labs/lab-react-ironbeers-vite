@@ -1,6 +1,10 @@
 body {
   margin: 0;
   padding: 0;
+  background-image: url(/src/assets/paper_grayscale.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 a {
