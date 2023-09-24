@@ -1,0 +1,58 @@
+.navBar img {
+  width: 60px;
+}
+
+.navBar {
+  background-color: rgb(113, 127, 122);
+  margin: auto;
+}
+
+.beers {
+  display: block;
+  padding: 8px;
+  border: 1px solid grey;
+  width: 50%;
+  font-size: 1.2em;
+}
+
+.beerImage {
+  width: 80px;
+}
+
+.AddBeer {
+  border: 1px solid grey;
+  box-shadow: 0px 2px 3px grey;
+  width: 400px;
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.AddBeer {
+  background: #fffee7;
+}
+
+.AddBeer label {
+  width: 150px;
+  display: block;
+  margin: 0 auto;
+}
+
+.AddBeer input {
+  padding: 10px;
+  display: inline-block;
+  margin: 2px 0 10px;
+}
+
+button {
+  padding: 3px 10px;
+  min-width: 50px;
+  height: 40px;
+  margin: 5px;
+  font-size: 1rem;
+}
+
+.random{
+    margin: 20px;
+}
