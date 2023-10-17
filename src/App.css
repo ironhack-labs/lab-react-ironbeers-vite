@@ -1,0 +1,23 @@
+.beerSection > img {
+	width: 100%;
+}
+
+* {
+	color: black;
+}
+
+.HomePage section {
+	border: 1px solid gray
+}
+
+.Navbar {
+	display: flex;
+	justify-content: center;
+	padding: 12px;
+	background-color: rgb(46, 130, 225);
+}
+
+.beerImg {
+	height: 260px;
+	margin: 0 auto;
+}
