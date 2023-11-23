@@ -1,0 +1,6 @@
+.home {
+    background-color: rgb(113, 113, 241);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
