@@ -1,3 +1,17 @@
-function HomePage() {}
+import { Link } from "react-router-dom"
 
-export default HomePage;
+const HomePage = () => {
+
+    return (
+        <div className="HomePage">
+            <h1>Homepage</h1>
+            <ul>
+                <li><Link to={'/beers'}> All Beers</Link></li>
+                <li><Link to={'/random-beer'}> Random Beer</Link></li>
+                <li><Link to={'/new-beer'}> New Beer</Link></li>
+            </ul>
+        </div>
+    )
+}
+
+export default HomePage
