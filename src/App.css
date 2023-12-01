@@ -1,0 +1,67 @@
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+a {
+  color: black;
+}
+
+.HomePage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.beer-container {
+  margin: 20px;
+  padding: 10px;
+  border: 2px solid black;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.beer-container button {
+  width: 200px;
+  height: 30px;
+  background-color: lightgray;
+  border: none;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-family: monospace;
+}
+
+.Navbar {
+  background-color: blueviolet;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+
+.Foundbeer {
+  width: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20px;
+  border: 1px solid grey;
+  padding: 10px;
+}
+
+.Imgcontainer {
+  width: 100px;
+  align-content: center;
+  display: flex;
+  justify-content: center;
+}
+
+.Imgcontainer img {
+   max-height: 150px;
+   align-self: center;
+}
+
+.Beerinfo {
+  display: flex;
+  flex-direction: column;
+}
