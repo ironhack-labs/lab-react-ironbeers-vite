@@ -1,6 +1,6 @@
 function HomePage() {
   // axios code
-  return <div>hello world</div>;
+  return <div id="HomePage"></div>;
 }
 
 export default HomePage;
