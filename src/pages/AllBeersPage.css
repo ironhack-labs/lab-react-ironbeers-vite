@@ -1,16 +1,37 @@
-#AllBeers .beer {
-    display: flex;
-    min-height: 240;
-    align-items: center;
-}
-#AllBeers .beer img {
-    display: flex;
-    height: 240;
+#AllBeers .beer-row {
+  display: flex;
+  border-bottom: 1px solid grey;
+  justify-content: center;
 }
 
-#AllBeers .beer .description{
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    min-height: 100%;
+#AllBeers .beer {
+  display: flex;
+  min-height: 240;
+  align-items: center;
+  padding: 24px;
+}
+
+#AllBeers .beer img {
+  display: flex;
+  height: 200px;
+}
+
+#AllBeers .beer .description {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 100%;
+  padding: 24px;
+  justify-content: center;
+  gap: 1rem;
+}
+
+#AllBeers .beer .description p {
+  font-size: 1.5rem;
+  color: gray;
+}
+#AllBeers .beer .description h1 {
+  font-weight: normal;
+}
+#AllBeers .beer .description {
 }

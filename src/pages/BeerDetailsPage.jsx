@@ -22,7 +22,7 @@ function BeerDetailsPage() {
   return (
     <div id="BeerDetails">
       <div className="beer-details">
-        <img src="beers.png" />
+        <img src="/beers.png" />
         <div>
           <div>
             <h1>Trashy Blonde</h1>

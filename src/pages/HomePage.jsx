@@ -10,7 +10,7 @@ function HomePage() {
         <h1>All Beers</h1>
         <p>Lorem Ipsum</p>
       </Link>
-      <Link to={'/beers'} className="category">
+      <Link to={'/random-beer'} className="category">
         <img src="random-beer.png" />
         <h1>Random Beer</h1>
         <p>Lorem Ipsum</p>
