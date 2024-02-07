@@ -1,8 +1,12 @@
+import { Link } from 'react-router-dom';
+
 function Navbar() {
   return (
     <header>
       <nav id="navbar">
-        <img src="home-icon.png" alt="" />
+        <Link to={'./'}>
+          <img src="home-icon.png" alt="" />
+        </Link>
       </nav>
     </header>
   );

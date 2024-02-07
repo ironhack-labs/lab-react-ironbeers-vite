@@ -1,33 +1,96 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
-import {useNavigate} from 'react-router-dom'
+import axios from 'axios';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function AddBeerPage() {
-    
-    const navigate = useNavigate()
-    
+  const navigate = useNavigate();
 
-    const [newBeerCreated, setnewBeerCreated] = useState({})
+  const [newBeerCreated, setnewBeerCreated] = useState({
+    name: '',
+    tagline: '',
+  });
 
   function handleSubmit() {
+    e.preventDefault();
 
-    e.preventDefault()
-
-
-    
-
-    
-    
     axios
-      .post("https://ih-beers-api2.herokuapp.com/beers/new", newBeerCreated )
-      .then(()=> {
-
-        navigate('/beers')
+      .post('https://ih-beers-api2.herokuapp.com/beers/new', newBeerCreated)
+      .then(() => {
+        navigate('/beers');
       })
       .catch((err) => {
         console.log(err);
       });
   }
+
+  function handleChange(e) {
+    const nameOfField = e.target.getAttribute('name');
+    const value = e.target.value;
+    const newObject = { ...newBeerCreated };
+    newObject[nameOfField] = value;
+    setnewBeerCreated(newObject);
+  }
+
+  return (
+    <div>
+      <label>Name</label>
+      <input
+        type="text"
+        name="name"
+        value={newBeerCreated.name}
+        onChange={handleChange}
+      />
+      <label>Tagline</label>
+      <input
+        type="text"
+        name="tagline"
+        value={newBeerCreated.tagline}
+        onChange={handleChange}
+      />
+      <label>Tagline</label>
+      <input
+        type="text"
+        name="tagline"
+        value={newBeerCreated.tagline}
+        onChange={handleChange}
+      />
+      <label>Description</label>
+      <input
+        type="text"
+        name="tagline"
+        value={newBeerCreated.tagline}
+        onChange={handleChange}
+      />
+      <label>First Brewed</label>
+      <input
+        type="text"
+        name="tagline"
+        value={newBeerCreated.tagline}
+        onChange={handleChange}
+      />
+      <label>Brewers Tips</label>
+      <input
+        type="text"
+        name="tagline"
+        value={newBeerCreated.tagline}
+        onChange={handleChange}
+      />
+      <label>Attenuation Level</label>
+      <input
+        type="text"
+        name="tagline"
+        value={newBeerCreated.tagline}
+        onChange={handleChange}
+      />
+      <label>Contributed By</label>
+      <input
+        type="text"
+        name="tagline"
+        value={newBeerCreated.tagline}
+        onChange={handleChange}
+      />
+    </div>
+  );
 }
 
 export default AddBeerPage;
