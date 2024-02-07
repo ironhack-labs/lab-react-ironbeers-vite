@@ -1,3 +1,5 @@
-function RandomBeersPage() {}
+function RandomBeerPage() {
 
-export default RandomBeersPage;
+}
+
+export default RandomBeerPage;
