@@ -1,0 +1,16 @@
+#AllBeers .beer {
+    display: flex;
+    min-height: 240;
+    align-items: center;
+}
+#AllBeers .beer img {
+    display: flex;
+    height: 240;
+}
+
+#AllBeers .beer .description{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 100%;
+}
