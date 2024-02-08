@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import './HomePage.css';
 
 function HomePage() {
-  // axios code
+  
   return (
     <div id="Home">
       <Link to={'/beers'} className="category">

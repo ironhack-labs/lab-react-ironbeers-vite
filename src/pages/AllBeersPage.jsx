@@ -31,7 +31,7 @@ function AllBeersPage() {
       {beers.map((beer, index) => {
         return (
           <div key={index} className="beer-row">
-            <Link to={'/beers/65c32a85702d92000234704c'} className="beer">
+            <Link to={`/beers/${beer._id}`} className="beer">
               <img
                 className="lazy"
                 src={beer.image_url}
@@ -40,10 +40,10 @@ function AllBeersPage() {
                 alt="beer"
               />
               <div className="description">
-                <h1>Buzz</h1>
-                <p>A Real Bitter Experience.</p>
+                <h1>{beer.name}</h1>
+                <p>{beer.tagline}</p>
                 <span>
-                  <strong>Created by:</strong> Buzz
+                  <strong>Created by: {beer.contributed_by}</strong>{beer.name}
                 </span>
               </div>
             </Link>
