@@ -5,15 +5,16 @@
 }
 
 #AllBeers .beer {
-  display: flex;
+  display: flex;  
   min-height: 240;
-  align-items: center;
+  align-items: center;  
   padding: 24px;
 }
 
 #AllBeers .beer img {
   display: flex;
   height: 200px;
+ 
 }
 
 #AllBeers .beer .description {
