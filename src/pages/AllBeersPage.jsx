@@ -8,14 +8,17 @@ function AllBeersPage() {
   const [beers, setBeers] = useState(null); // null or [] ?
   const [searchParams, setSearchParams] = useSearchParams();
   
- // const beerName = searchParams.get('q') // ""
+  const beerName = searchParams.get('q') // ""
   //console.log(beerName, 'here the beerName')
-  const [searchQuery, setSearchQuery] = useState(searchParams.get('q'))
-  console.log("react render")
+  // All the hooks should be declared inside of the component function up and not
+  // inside of a function like handleSearch for example!! Component function is not
+  // a function!!
+  /*const [searchQuery, setSearchQuery] = useState(searchParams.get('q'))*/
   
+  console.log("react render")  
 
   useEffect(() => {
-    const url = searchQuery ? `https://ih-beers-api2.herokuapp.com/beers/search?q=${searchQuery}` : 
+    const url = beerName ? `https://ih-beers-api2.herokuapp.com/beers/search?q=${beerName}` : 
     "https://ih-beers-api2.herokuapp.com/beers";
 
     axios
@@ -27,14 +30,12 @@ function AllBeersPage() {
       .catch((err) => {
         console.log(err);
       });
-  }, [searchParams, setSearchParams, searchQuery]);
+  }, [searchParams, setSearchParams, beerName]);
 
   function handleSearch(e) {
     console.log(e)
-    //setSearchParams({q: e.target.value})
-    setSearchQuery(e.target.value)
-
-  
+    setSearchParams({q: e.target.value})
+    /*setSearchQuery(e.target.value)  */
   }
 
   if (beers === null) {
