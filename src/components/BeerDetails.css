@@ -1,0 +1,56 @@
+.BeerDetails .row {
+  display: flex;
+  align-items: center;
+}
+
+.BeerDetails {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  align-items: center;
+  padding: 24px;
+}
+
+.BeerDetails img {
+  width: auto;
+  height: 400px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.BeerDetails .container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.BeerDetails .row > span.right {
+  margin-left: auto;
+}
+
+.BeerDetails .row-header {
+  font-size: 2.25rem;
+}
+
+.BeerDetails .row-header h1 {
+  font-weight: normal;
+  font-size: inherit;
+}
+
+.BeerDetails .row-header span {
+  color: rgb(184, 184, 184);
+}
+
+.BeerDetails .row-tagline,
+.BeerDetails .description {
+  font-size: 1.25rem;
+}
+
+.BeerDetails .row-tagline .tagline {
+  color: gray;
+}
+
+span.contributed-by {
+  color: gray;
+  font-weight: bold;
+}

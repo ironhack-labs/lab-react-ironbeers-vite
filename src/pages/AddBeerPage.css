@@ -1,0 +1,38 @@
+#AddBeer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#AddBeer form#add-beer {
+  display: flex;
+  flex-direction: column;
+}
+
+#AddBeer form#add-beer label {
+  font-weight: bold;
+  padding-left: 12px;
+  margin-top: 16px;
+  margin-bottom: 2px;
+}
+
+#AddBeer form#add-beer input,
+#AddBeer form#add-beer textarea {
+  border-width: 2px;
+  font-weight: bold;
+  border-radius: 1.25rem;
+  border-color: lightgray;
+  border-style: solid;
+  width: 300px;
+  height: 40px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+#AddBeer form#add-beer textarea {
+  border-radius: 1.15rem;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  height: 160px;
+  resize: none;
+}
