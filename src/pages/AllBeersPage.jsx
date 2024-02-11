@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
-import { getBeers } from '../services/beerService';
+import { getBeers, searchBeer } from '../services/beerService';
 import BeerCard from '../components/BeerCard';
 
 
 function AllBeersPage() {
-    const [beers, setBeers] = useState([])
+    const [beers, setBeers] = useState([]);
+    const [resApi, setResApi] = useState('');
 
     useEffect(() => {
         getBeers()
@@ -12,15 +13,37 @@ function AllBeersPage() {
                 setBeers(beersApi)
             })
             .catch((err) => console.error(err))
-    }, [])
+    }, []); 
+
+    useEffect(() => {
+        searchBeer(resApi)
+            .then((searchedBeer) => {
+                setResApi(searchedBeer)
+            })
+            .catch((err) => console.error(err))
+    }, [resApi]);
+
+    /*const handleOnSearch = (ev) => {
+        setResApi(ev.target.value);
+    };*/
 
     return(
-        <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-            {beers.map((beer) => (
-                <div key={beer._id} className="col">
-                    <BeerCard {...beer}/>
-                </div>
-            ))}
+        <div>{/*
+            <div>
+            <h2>All Beers</h2>
+            <label htmlFor="search">Search your Beer:</label>
+            <input type="text"
+                id="search"
+                value={resApi}
+                onChange={handleOnSearch} />
+            </div> */}
+            <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                {beers.map((beer) => (
+                    <div key={beer._id} className="col">
+                        <BeerCard {...beer}/>
+                    </div>
+                ))}
+        </div>
         </div>
     )
 }

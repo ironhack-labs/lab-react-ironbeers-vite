@@ -8,3 +8,5 @@ httpBeers.get(`/beers/${_id}`)
 export const getRandomBeer = () => httpBeers.get("/beers/random") 
 
 export const createBeer = () => httpBeers.post("/beers/new")
+
+export const searchBeer = (searchTerm) => httpBeers.get(`/beers/search?q=${searchTerm}`)
