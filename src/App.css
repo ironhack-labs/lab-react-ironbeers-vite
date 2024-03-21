@@ -33,3 +33,17 @@ nav {
     color: whitesmoke;
     font-size: 4rem;
 }
+
+.beer {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    padding: 1rem 5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.beer img {
+    width: auto;
+    height: 150px;
+}
