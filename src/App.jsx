@@ -5,11 +5,13 @@ import AllBeersPage from "./pages/AllBeersPage";
 import AddBeerPage from "./pages/AddBeerPage";
 import BeerDetailsPage from "./pages/BeerDetailsPage";
 import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar"
 
 function App() {
   return (
     <div className="App">
       <div className="container">
+        <Navbar />
         <h1>LAB | React IronBeers</h1>
         <Routes>
           <Route path="/" element={<HomePage />} />

@@ -19,3 +19,17 @@
     padding: 1rem;
     color: #222222;
 }
+
+nav {
+    background-color: #3DC4FC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    height: 6rem;
+    margin: 0px 16px;
+}
+.home-icon {
+    color: whitesmoke;
+    font-size: 4rem;
+}
