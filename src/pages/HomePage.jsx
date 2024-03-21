@@ -7,17 +7,21 @@ function HomePage() {
         {
             title: "All Beers",
             url: "/src/assets/beers.png",
-            id: 1
+            id: 1,
+            page: "beers"
         },
         {
             title: "Random Beers",
             url: "/src/assets/random-beer.png",
-            id: 2
+            id: 2,
+            page: "random"
         },
         {
             title: "New Beer",
             url: "/src/assets/new-beer.png",
-            id: 3
+            id: 3,
+            page: "new-beer"
+            
         },
     ]
 
@@ -25,7 +29,7 @@ function HomePage() {
     <div className="container-hp">
       <h1>HomePage</h1>
       { blockList.map((element) => {
-        return (<Link key={element.id} to={element.url}>
+        return (<Link key={element.id} to={element.page}>
         <div className="container-card">
           <img src={element.url} alt="image" />
           <div className="container-content">
