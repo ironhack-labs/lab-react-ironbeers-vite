@@ -62,6 +62,7 @@ function AddBeerPage() {
       <label>Description: </label>
       <br />
       <input
+        className="description"
         type="text"
         name="first_brewed"
         value={description}
@@ -82,6 +83,7 @@ function AddBeerPage() {
       <label>Attenuation Level: </label>
       <br />
       <input
+        className="level"
         type="number"
         name="attenuation_level"
         value={attenuation_level}
@@ -99,7 +101,9 @@ function AddBeerPage() {
       />
       <br />
       <br />
-      <button type="submit">Add Beer"</button>
+      <div className="container-button">
+        <button type="submit">Add Beer</button>
+      </div>
       <br />
     </form>
   );
