@@ -14,7 +14,7 @@ function HomePage() {
             title: "Random Beers",
             url: "/src/assets/random-beer.png",
             id: 2,
-            page: "random"
+            page: "random-beer"
         },
         {
             title: "New Beer",
