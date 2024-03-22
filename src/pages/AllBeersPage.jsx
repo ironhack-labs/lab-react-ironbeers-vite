@@ -14,12 +14,12 @@ function AllBeersPage() {
             try {
                 //axios => promise to GET data from beer API
                 const res = await axios.get(BASE_URL);
-                //if axious = success, setBeers data state updates
+                //if axios = success, setBeers data state updates
                 console.log(res)
                 setBeers(res.data);
             } catch (err) {
                 //conditional if not = error
-                console.log('Error fetching the beers:', error);
+                console.error('Error fetching the beers:');
             }
         };
         fetchBeers(); //call the f(x) 

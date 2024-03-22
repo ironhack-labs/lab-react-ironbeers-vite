@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
 function BeerDetailsPage() {
@@ -16,7 +15,7 @@ function BeerDetailsPage() {
         console.log(res);
         setBeer(res.data);
       } catch (err) {
-        console.log("Error fetching the beers:", error);
+        console.error("Error fetching the beers:");
       }
     };
     getBeer()
