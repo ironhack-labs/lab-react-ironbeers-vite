@@ -1,6 +1,9 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Roboto', sans-serif;
+  /* smooths font => readability => G/Safari */
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -19,3 +22,5 @@ form {
 .btn-round {
   margin: 20px;
 }
+
+
