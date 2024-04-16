@@ -1,0 +1,12 @@
+.beer-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .beer-list > div {
+    width: 25%; 
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
