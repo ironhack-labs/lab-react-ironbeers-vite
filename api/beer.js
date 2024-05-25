@@ -32,8 +32,7 @@ export const create = ({
     })
 }
 
-// export const searchBeer = (query) => {
-//     return 
-//     //api.get(`/search?q=${query}`)
-//     api.get("/search")
-// }
+export const searchBeer = (query) => {
+    return 
+   api.get(`/search?q=${query}`)
+}

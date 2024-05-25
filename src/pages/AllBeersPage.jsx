@@ -30,9 +30,8 @@ function AllBeersPage() {
         <Navbar />
             {
                 beerList.map((beer) => {
-                    console.log(beerList);
                     return (
-                    <Link key={beer._id} to={`/beers/${beer._id}}`} style={{color:"black"}}>
+                    <Link key={beer._id} to={`/beers/${beer._id}`} style={{color:"black"}}>
                         <div  style={divStyle}>
                             <div>
                                 <img src={beer.image_url} alt="beer" style={imgStyle}/>
