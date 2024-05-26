@@ -16,7 +16,9 @@ function HomePage() {
     <div>
       <Navbar />
       <div style={divStyle}>
-        <Link to="/beers"><img src={AllBeersImg} style={imgStyle} /></Link>
+        <Link to="/beers">
+          <img src={AllBeersImg} style={imgStyle} />
+        </Link>
         <h1>All Beers</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla blandit
@@ -25,7 +27,9 @@ function HomePage() {
         </p>
       </div>
       <div style={divStyle}>
-      <Link to="/beers/random"><img src={RandomBeerImg} style={imgStyle} /></Link>
+        <Link to="/beers/random">
+          <img src={RandomBeerImg} style={imgStyle} />
+        </Link>
         <h1>Random Beer</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla blandit
@@ -34,7 +38,9 @@ function HomePage() {
         </p>
       </div>
       <div style={divStyle}>
-      <Link to="/new-beer"><img src={NewBeerImg} style={imgStyle} /></Link>
+        <Link to="/new-beer">
+          <img src={NewBeerImg} style={imgStyle} />
+        </Link>
         <h1>New Beer</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla blandit
