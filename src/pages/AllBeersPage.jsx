@@ -4,7 +4,7 @@ import { useState,useEffect } from "react";
 import { Link } from "react-router-dom";
 
 function AllBeersPage() {
-    const [beerList, setbeerList] = useState([])
+    const [beerList, setBeerList] = useState([])
     const imgStyle = {
         width: "10%"
     }
@@ -21,13 +21,27 @@ function AllBeersPage() {
             .getAll()
             .then(response => {
                 const {data} = response;
-                setbeerList(data);
+                setBeerList(data);
             })
             .catch(error => console.error(error))
     }, [])
+
+    function handleSearch (query) {
+        beerApi
+            .searchBeer(query)
+            .then(response => {
+                const {data} = response;
+                setBeerList(data);
+            })
+            .catch(error => console.error(error))
+    }
+
     return (
         <div>
-        <Navbar />
+            <Navbar />
+            <div></div>
+            <label htmlFor="beerSearch">Find a beer</label>
+            <input type="search" id="search" name="search" placeholder="Search..." onChange={(e) => {handleSearch (e.target.value)}}/>
             {
                 beerList.map((beer) => {
                     return (
