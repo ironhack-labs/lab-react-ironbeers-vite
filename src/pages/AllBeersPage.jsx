@@ -4,6 +4,7 @@ import axios from "axios";
 
 function AllBeersPage() {
     const [allBeers, setAllBeers] = useState([]);
+    const [search, setSearch] = useState("");
 
     const getAllBeers = async () => {
         try {
@@ -21,23 +22,59 @@ function AllBeersPage() {
         getAllBeers();
     }, []);
 
+    // const query = event => {
+    //     setSearch(event.target.value)
+    //     handleSearch(event.target.value)
+    // }
+
+    // const handleSearch = async(query) => {
+    //     try {
+    //         const responseSearch = await axios.get(`https://ih-beers-api2.herokuapp.com/beers/search?q=${query}`);
+    //         setAllBeers(responseSearch.data)
+    //     } catch (error) {
+    //         console.log('error fetching search value', error)
+    //     }
+        
+    // }
+
+    const handleSearch = async(event) => {
+        const query = event.target.value;
+        setSearch(query);
+        try {
+            const responseSearch = await axios.get(`https://ih-beers-api2.herokuapp.com/beers/search?q=${query}`)
+            setAllBeers(responseSearch.data);
+        } catch (error) {
+            console.log('error fetching search value', error)
+        }
+    }
+
+
+
     return (
-        <ul>
-            {allBeers.map(beer => {
-                
-                return (
-                    <li key={beer._id}>
-                        <img src={beer.image_url} />
-                        <Link to={`/beers/${beer._id}`}>
-                            <h1>{beer.name}</h1>
-                        </Link>
-                        <p>{beer.tagline}</p>
-                        <p>Created by: {beer.contributed_by}</p>
-                    </li>
-                )
-            })}
+        <div>
+            <form>
+                <label>Search</label>
+                <input type="text" placeholder="Search..." value={search} onChange={handleSearch} /> 
+                {/* onChange={query} */}
+            </form>
             
-        </ul>
+
+            <ul>
+                {allBeers.map(beer => {
+                    return (
+                        <li key={beer._id}>
+                            <img src={beer.image_url} />
+                            <Link to={`/beers/${beer._id}`}>
+                                <h1>{beer.name}</h1>
+                            </Link>
+                            <p>{beer.tagline}</p>
+                            <p>Created by: {beer.contributed_by}</p>
+                        </li>
+                    )
+                })}
+                
+            </ul>
+        </div>
     )
 }
 
