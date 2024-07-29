@@ -3,7 +3,7 @@ import "./App.css";
 import HomePage from "./pages/HomePage";
 import Navbar from "./components/Navbar";
 import AllBeersPage from "./pages/AllBeersPage";
-
+import BeerDetailsPage from "./pages/BeerDetailsPage";
 
 function App() {
   return (
@@ -12,9 +12,9 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/beers" element={<AllBeersPage />} />
+        <Route path="/beers/:beerId" element={<BeerDetailsPage />} />
         {/* <Route path="/random-beer" element={<RandomBeerPage />} /> */}
         {/* <Route path="/new-beer" element={<AddBeerPage />} /> */}
-        {/* <Route path="/beers/:beerId" element={<BeerDetailsPage />} /> */}
       </Routes>
     </>
   );
