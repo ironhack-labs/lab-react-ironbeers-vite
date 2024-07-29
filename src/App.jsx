@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage";
 import Navbar from "./components/Navbar";
 import AllBeersPage from "./pages/AllBeersPage";
 import BeerDetailsPage from "./pages/BeerDetailsPage";
+import RandomBeerPage from "./pages/RandomBeerPage";
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/beers" element={<AllBeersPage />} />
         <Route path="/beers/:beerId" element={<BeerDetailsPage />} />
-        {/* <Route path="/random-beer" element={<RandomBeerPage />} /> */}
+        <Route path="/random-beer" element={<RandomBeerPage />} />
         {/* <Route path="/new-beer" element={<AddBeerPage />} /> */}
       </Routes>
     </>
