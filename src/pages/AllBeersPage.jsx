@@ -1,16 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import './AllBeersPage.css'; // Import CSS for styling
-
+import './AllBeersPage.css';
 const AllBeersPage = () => {
   const [beers, setBeers] = useState([]);
 
   useEffect(() => {
-    // Fetch beers data from the API
     const fetchBeers = async () => {
       const response = await fetch('https://ih-beers-api2.herokuapp.com/beers');
       const data = await response.json();
-      console.log(data); // Log data to see its structure
+      console.log(data);
       setBeers(data);
     };
 
