@@ -1,15 +1,10 @@
 .navbar {
-    background-color: #333; /* Dark background color */
-    padding: 10px; /* Padding around the navbar */
+    background-color: #333;
+    padding: 10px;
   }
   
   .navbar-link {
-    color: #fff; /* White text color */
-    text-decoration: none; /* Remove underline from links */
-    font-size: 1.2em; /* Font size for the link */
-  }
-  
-  .navbar-link:hover {
-    text-decoration: underline; /* Underline on hover */
+    color: #fff;
+    text-decoration: none;
   }
   
