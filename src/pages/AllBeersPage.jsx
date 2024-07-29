@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './AllBeersPage.css';
+
 const AllBeersPage = () => {
   const [beers, setBeers] = useState([]);
 
