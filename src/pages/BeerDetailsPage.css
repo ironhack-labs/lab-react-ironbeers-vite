@@ -1,0 +1,34 @@
+.beer-details-page {
+    padding: 20px;
+  }
+  
+  .beer-details-page img {
+    display: block;
+    margin: 0 auto 20px;
+    height: 500px;
+  }
+  
+  .details-container {
+    text-align: center;
+  }
+  
+  .name-attenuation,
+  .tagline-first-brewed {
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .name-attenuation h1,
+  .tagline-first-brewed h2 {
+    margin: 0;
+  }
+
+  .description {
+    font-size: 20px;
+  }
+  
+  .tagline {
+    color: #9b9a9a;
+  }

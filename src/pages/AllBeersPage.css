@@ -1,0 +1,32 @@
+.all-beers-page {
+    padding: 20px;
+  }
+  
+  .all-beers-page h1 {
+    text-align: center;
+  }
+  
+  .all-beers-page ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .all-beers-page li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .all-beers-page img {
+    height: 200px;
+    margin-right: 20px;
+  }
+  
+  .all-beers-page .text-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .all-beers-page .tagline {
+    color: #9b9a9a;
+  }

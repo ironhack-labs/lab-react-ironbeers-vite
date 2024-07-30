@@ -1,0 +1,11 @@
+.nav-bar {
+    background-color: #3dc4fc;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link img {
+    color: white;
+}
