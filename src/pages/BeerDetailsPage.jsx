@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import './BeerDetailsPage.css';
+// import './BeerDetailsPage.css';
 import Navbar from '../components/Navbar';
 import BeerCardDetails from '../components/BeerCardDetails';
 
