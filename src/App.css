@@ -1,0 +1,39 @@
+ nav {
+    background-color: rgb(14, 183, 235);
+    border : 4px solid white;
+    padding: 20px;
+}
+.home-icon {
+    width: 5%;
+    height: 5%;
+    margin: 0px;
+    padding-left: 50%;
+}
+
+.beers {
+
+    background-color: whitesmoke;
+    width: 100%;
+    height: 100%;
+  }
+  
+.random-beer {
+  
+    background-color: whitesmoke;
+    width: 100%;
+    height: 100%;
+  }
+
+  .new-beer {
+  
+    background-color: whitesmoke;
+    width: 100%;
+    height: 100%;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    
+  }
