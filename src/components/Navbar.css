@@ -1,0 +1,15 @@
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1e90ff; /* More vibrant blue background color */
+    height: 60px; /* Adjust the height as needed */
+    padding: 10px; /* Optional: Add some padding */
+    border: 2px solid white; /* Smooth white border */
+    border-radius: 15px; /* Rounded corners */
+  }
+  
+  nav img {
+    width: 50px; /* Adjust the size as needed */
+    height: 50px; /* Adjust the size as needed */
+  }

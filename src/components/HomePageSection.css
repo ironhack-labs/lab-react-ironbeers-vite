@@ -1,0 +1,25 @@
+.home-page-section {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 400px; /* Adjust the height as needed */
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  background-color: #ffffff; /* Solid white background */
+  padding: 20px;
+  text-align: center;
+  margin-top: 0; /* Ensure no overlap */
+}
+
+.content h1 {
+  margin: 0;
+  font-size: 24px; /* Adjust font size as needed */
+}
+
+.content p {
+  margin: 10px 0 0;
+  font-size: 16px; /* Adjust font size as needed */
+}
