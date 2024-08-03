@@ -1,0 +1,37 @@
+.beer-card {
+    display: flex;
+    align-items: center;
+    background-color: #f5f5dc; /* Lightly cream color */
+    border-radius: 10px; /* Rounded edges */
+    padding: 10px;
+    margin: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    list-style-type: none; /* Remove dots */
+  }
+  
+  .beer-image {
+    width: 100px; /* Increased width */
+    height: auto;
+    margin-right: 20px; /* Increased margin to move text more to the right */
+    border-radius: 10px; /* Rounded edges for the image */
+  }
+  
+.beer-details {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif; /* Apply Roboto font */
+  line-height: 1.1; /* Reduced line height */
+}
+
+.beer-title {
+  text-decoration: none; /* Remove underline from link */
+  color: #000; /* Black color for the title */
+}
+
+.beer-title h2 {
+  margin: 0;
+}
+
+.beer-title:hover {
+  text-decoration: underline; /* Underline on hover */
+}
