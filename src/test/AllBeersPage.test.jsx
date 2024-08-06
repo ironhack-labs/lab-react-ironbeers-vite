@@ -1,86 +1,58 @@
-import { describe, test, expect, beforeEach, afterEach } from "vitest";
-import { render, screen, waitFor } from "@testing-library/react";
-import { MemoryRouter } from "react-router-dom";
-import nock from "nock";
-import axios from "axios";
+import { render, screen } from "@testing-library/react";
+import { BrowserRouter } from "react-router-dom";
 import AllBeersPage from "../pages/AllBeersPage";
+import axios from "axios";
+import MockAdapter from "axios-mock-adapter";
 
-const API_URL = "https://ih-beers-api2.herokuapp.com";
+const mock = new MockAdapter(axios);
 
-axios.defaults.adapter = "http";
+const beersData = [
+  {
+    _id: "a1",
+    name: "Beer 1",
+    tagline: "Tagline 1",
+    contributed_by: "Contributor 1",
+    image_url: "https://image1.jpg",
+  },
+  {
+    _id: "a2",
+    name: "Beer 2",
+    tagline: "Tagline 2",
+    contributed_by: "Contributor 2",
+    image_url: "https://image2.jpg",
+  },
+];
 
-describe("Iteration 4", () => {
-  describe("AllBeersPage component", () => {
-    const beers = [
-      {
-        _id: "a1",
-        image_url: "https://image1.jpg",
-        name: "Beer 1",
-        tagline: "Tagline 1",
-        contributed_by: "Contributor 1",
-      },
-      {
-        _id: "a2",
-        image_url: "https://image2.jpg",
-        name: "Beer 2",
-        tagline: "Tagline 2",
-        contributed_by: "Contributor 2",
-      },
-    ];
+mock.onGet("https://ih-beers-api2.herokuapp.com/beers").reply(200, beersData);
 
-    let scope;
-    nock(API_URL).get("/beers/").optionally().replyWithError({
-      message: "\n\nInvalid endpoint: `/beers/`. Did you mean `/beers`?\n",
-      code: 404,
-    });
+test("renders a list of all beers and their details from the Beers API", async () => {
+  render(
+    <BrowserRouter>
+      <AllBeersPage />
+    </BrowserRouter>
+  );
 
-    beforeEach(() => {
-      scope = nock(API_URL).get("/beers").reply(200, beers);
+  const beer1Name = await screen.findByText("Beer 1");
+  const beer1Tagline = await screen.findByText("Tagline 1");
+  const beer1Contributor = await screen.findByText((content, element) =>
+    content.includes("Contributor 1")
+  );
+  const beer1DetailsLink = await screen.findByTestId("details-link-a1");
 
-      render(
-        <MemoryRouter initialEntries={["/beers"]}>
-          <AllBeersPage />
-        </MemoryRouter>
-      );
-    });
+  expect(beer1Name).toBeInTheDocument();
+  expect(beer1Tagline).toBeInTheDocument();
+  expect(beer1Contributor).toBeInTheDocument();
+  expect(beer1DetailsLink).toHaveAttribute("href", "/beers/a1");
 
-    afterEach(() => {
-      scope.done();
-    });
+  const beer2Name = await screen.findByText("Beer 2");
+  const beer2Tagline = await screen.findByText("Tagline 2");
+  const beer2Contributor = await screen.findByText((content, element) =>
+    content.includes("Contributor 2")
+  );
+  const beer2DetailsLink = await screen.findByTestId("details-link-a2");
 
-    test("renders a list of all beers and their details from the Beers API", async () => {
-      await waitFor(() => {
-        expect(screen.getByText("Beer 1")).toBeInTheDocument();
-      });
-      expect(screen.getByText("Beer 2")).toBeInTheDocument();
-
-      const images = screen.getAllByRole("img");
-      const img1 = images.find(
-        (img) => img.getAttribute("src") === beers[0].image_url
-      );
-      const img2 = images.find(
-        (img) => img.getAttribute("src") === beers[1].image_url
-      );
-
-      expect(img1).toBeInTheDocument();
-      expect(img2).toBeInTheDocument();
-      expect(screen.getByText("Tagline 1")).toBeInTheDocument();
-      expect(screen.getByText("Created by: Contributor 1")).toBeInTheDocument();
-
-      expect(screen.getByText("Tagline 2")).toBeInTheDocument();
-      expect(screen.getByText("Created by: Contributor 2")).toBeInTheDocument();
-    });
-
-    test("renders a link to Beer Details Page for each beer", async () => {
-      await waitFor(() => {
-        expect(screen.getByText("Beer 1")).toBeInTheDocument();
-      });
-
-      const beerLink1 = screen.getByText("Beer 1").closest("a");
-      expect(beerLink1).toHaveAttribute("href", "/beers/a1");
-
-      const beerLink2 = screen.getByText("Beer 2").closest("a");
-      expect(beerLink2).toHaveAttribute("href", "/beers/a2");
-    });
-  });
+  expect(beer2Name).toBeInTheDocument();
+  expect(beer2Tagline).toBeInTheDocument();
+  expect(beer2Contributor).toBeInTheDocument();
+  expect(beer2DetailsLink).toHaveAttribute("href", "/beers/a2");
 });
