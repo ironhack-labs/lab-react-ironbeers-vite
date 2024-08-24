@@ -19,7 +19,7 @@ function AddBeerPage() {
         description,
         first_brewed: firstBrewed,
         brewers_tips: brewersTips,
-        attenuation_level: Number(attenuationLevel),
+        attenuation_level: attenuationLevel,
         contributed_by: contributedBy,
       })
       .then((response) => {
@@ -58,9 +58,8 @@ function AddBeerPage() {
         </label>
         <label>
           Description
-          <input
+          <textarea
             name="description"
-            type="text"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
           />
@@ -101,7 +100,7 @@ function AddBeerPage() {
             onChange={(e) => setContributedBy(e.target.value)}
           />
         </label>
-        <button name="submit">ADD NEW</button>
+        <button type="submit">Add Beer</button>
       </form>
     </div>
   );
