@@ -14,10 +14,13 @@ function AllBeersPage() {
   }, []);
 
   const handleSearch = (e) => {
+    const query = e.target.value;
+    const searchUrl = new URL(
+      `https://ih-beers-api2.herokuapp.com/beers/search?q=${query}`
+    ).href;
     axios
-      .get(URL.parse(`https://ih-beers-api2.herokuapp.com/beers/search?q=${e.target.value}`).href)
-      .then((response) => setBeers(response.data)
-    )
+      .get(searchUrl)
+      .then((response) => setBeers(response.data))
       .catch((err) => console.log(err));
   };
 
