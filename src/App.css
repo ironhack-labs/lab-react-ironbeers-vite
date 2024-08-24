@@ -1,0 +1,257 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Navbar Styling */
+  .Navbar {
+    background-color: #1e3a5f; /* Darker blue for a modern look */
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .Navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 15px;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .Navbar a:hover {
+    color: #ffb347; /* Soft orange for hover effect */
+  }
+  
+  /* Add Beer Page */
+  .AddBeerPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+  }
+  
+  .AddBeerPage form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 320px;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .AddBeerPage label {
+    margin-bottom: 12px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .AddBeerPage input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+  }
+  
+  .AddBeerPage input:focus {
+    border-color: #007bff;
+  }
+  
+  .AddBeerPage button {
+    padding: 12px 25px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .AddBeerPage button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  /* All Beers Page */
+  .AllBeersPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+  }
+  
+  .AllBeersPage input {
+    width: 300px;
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .AllBeersPage .beerContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+  }
+  
+  .AllBeersPage .beerContainer:hover {
+    transform: translateY(-5px);
+  }
+  
+  .AllBeersPage .beerContainer img {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  .AllBeersPage .beerContainer h2 {
+    margin-bottom: 5px;
+    color: #007bff;
+  }
+  
+  .AllBeersPage .beerContainer p {
+    margin-bottom: 5px;
+    color: #555;
+  }
+  
+  /* Beer Details Page */
+  .BeerDetailsPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .BeerDetailsPage img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  .BeerDetailsPage .beerInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .BeerDetailsPage .beerInfo__firstLine h2 {
+    margin-right: 10px;
+    color: #333;
+  }
+  
+  /* Home Page */
+  .HomePage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 40px;
+  }
+  
+  .HomePage a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .HomePage div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 320px;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+  }
+  
+  .HomePage div:hover {
+    transform: translateY(-5px);
+  }
+  
+  .HomePage img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  .HomePage h2 {
+    margin-bottom: 5px;
+    color: #007bff;
+  }
+  
+  .HomePage p {
+    margin-bottom: 5px;
+    color: #555;
+  }
+  
+  /* Random Beer Page */
+  .RandomBeerPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+  }
+  
+  .RandomBeerPage div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 320px;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.2s;
+  }
+  
+  .RandomBeerPage div:hover {
+    transform: translateY(-5px);
+  }
+  
+  .RandomBeerPage img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  .RandomBeerPage .beerInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .RandomBeerPage .beerInfo__firstLine h2 {
+    margin-right: 10px;
+    color: #333;
+  }
+  

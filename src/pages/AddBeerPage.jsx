@@ -36,7 +36,7 @@ function AddBeerPage() {
   };
 
   return (
-    <div>
+    <div className="AddBeerPage">
       <form onSubmit={handleSubmit}>
         <label>
           Name

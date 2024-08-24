@@ -6,7 +6,6 @@ function Navbar() {
         <nav className="Navbar">
             <Link to="/">
                 <img src={homePagePic} alt="Home page"/>
-                HomePage
             </Link>
         </nav>
     )

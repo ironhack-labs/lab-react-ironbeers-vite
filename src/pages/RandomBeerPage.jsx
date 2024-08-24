@@ -28,7 +28,7 @@ function RandomBeerPage() {
           </p>
         </div>
         <div className="beerInfo__thirdLine">
-          <p>{beer.brewers_tips}</p>
+          <p>{beer.description}</p>
         </div>
         <div className="beerInfo__lastLine">
           <p>Created by: {beer.contributed_by}</p>
