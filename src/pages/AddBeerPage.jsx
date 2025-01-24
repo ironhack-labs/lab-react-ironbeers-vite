@@ -7,7 +7,8 @@ function AddBeerPage() {
         first_brewed: "",
         brewers_tips: "",
         attenuation_level: 0,
-        contributed_by: ""
+        contributed_by: "", 
+        image: ""
     });
 
     const handleChange = (e) => {
@@ -23,7 +24,7 @@ function AddBeerPage() {
         e.preventDefault();
         console.log("submit");
         console.log(formData);
-        useFetchData();
+        makePost();
     }
 
     async function makePost(){
@@ -49,19 +50,14 @@ function AddBeerPage() {
         }
     }
 
-    const useFetchData = () => {
-        // You POST method here
-        const callAPI = useCallback(() => {
-            makePost();
-        }, []);
-    }
-
     return (
-        <div className="add-beers-page">
+        <div className="add-beers-page" onSubmit={handleSubmit}>
             <h1>Add a New Beer</h1>
             <form className="new-beer-form">
                 <label htmlFor="name">Name</label>
                 <input name="name" value={formData.name} type="text" onChange={handleChange}/>
+                <label htmlFor="name">Image</label>
+                <input name="image" value={formData.image} type="text" onChange={handleChange}/>
                 <label htmlFor="tagline">Tagline</label>
                 <input name="tagline" type="text" value={formData.tagline} onChange={handleChange}/>
                 <label htmlFor="description">Description</label>

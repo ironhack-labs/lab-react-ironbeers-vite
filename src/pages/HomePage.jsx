@@ -24,7 +24,7 @@ function HomePage() {
             image={NewBeer}
             headline={"New beer"}
             sectionText={placeholdertext}
-            link={"/new-beer"}
+            link={"/add-beers"}
           />
         </div>
       </div>
