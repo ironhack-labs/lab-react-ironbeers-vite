@@ -53,8 +53,7 @@ function AddBeerPage() {
         // You POST method here
         const callAPI = useCallback(() => {
             makePost();
-        }, [])
-        return [res, callAPI];
+        }, []);
     }
 
     return (
