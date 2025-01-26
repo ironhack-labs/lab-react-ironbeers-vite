@@ -14,6 +14,8 @@ function BeerDetailsPage() {
          .catch((err) => console.error(err))
     },[beerId])
 
+    
+
 
   return (
     <>
@@ -37,7 +39,7 @@ function BeerDetailsPage() {
             </div>
             <p>{beer.description}</p>
             <p className="card-text">
-                contributed_by: {beer.contributed_by.split(" <")[0]}
+                contributed_by: {beer.contributed_by}
             </p>
             </div>
         </div>

@@ -25,7 +25,7 @@
                         <h5 className="card-title">{beer.name}</h5>
                         </Link>
                         <h6 className="card-title">{beer.tagline}</h6>
-                        <p className="card-text"><strong>Created by:</strong> {beer.contributed_by.split(" <")[0]}</p>
+                        <p className="card-text"><strong>Created by:</strong> {beer.contributed_by}</p>
                         
                             
                        
