@@ -1,6 +1,6 @@
 
 import { useEffect,useState } from "react";
-import { listBeers } from "../services/BeersService";
+import { randomBeer } from "../services/BeersService";
 
 
 function RandomBeersPage() {
@@ -8,10 +8,9 @@ function RandomBeersPage() {
     
     
         useEffect(()=>{
-            listBeers()
+            randomBeer()
              .then(response =>{
-                const randomIndex = Math.floor(Math.random() * response.length);
-                setBeer(response[randomIndex]);
+                setBeer(response);
              } 
             )
              .catch((err) => console.error(err))

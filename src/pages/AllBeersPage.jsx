@@ -25,6 +25,7 @@
         useEffect(()=>{
             searchBeer(filter.search)
             .then((response)=>{
+                console.log(response)
                 setBeers(response)
             })
             .catch((err)=>console.error(err))
